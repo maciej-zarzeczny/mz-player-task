@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./assets/fonts/Gilroy-Light.otf") format("otf"),
+    url("./assets/fonts/Gilroy-ExtraBold.otf") format("otf");
+}
+
+body {
+  margin: 0;
+  font-family: Gilroy;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}

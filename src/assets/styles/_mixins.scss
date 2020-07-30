@@ -1,0 +1,10 @@
+@import "../../assets/styles/functions";
+
+@mixin uppercase-text {
+  font-size: 18px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: color("secondary");
+
+  @content;
+}

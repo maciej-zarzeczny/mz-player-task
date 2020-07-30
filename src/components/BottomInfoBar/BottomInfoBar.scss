@@ -1,0 +1,49 @@
+@import "../../assets/styles/functions";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+section.bottom-info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: color("white");
+  padding: 25px $spacing;
+
+  .playlist-button {
+    width: 36px;
+    height: auto;
+  }
+
+  .next-track-duration {
+    font-size: 24px;
+    line-height: 36px;
+    color: color("secondary");
+  }
+
+  .next-track {
+    @include uppercase-text;
+  }
+
+  .next-track-info {
+    max-width: calc(100% - 128px);
+  }
+
+  .next-track-title {
+    font-size: 20px;
+    line-height: 36px;
+    color: #1b1b1b;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &::after {
+      content: " ............................................................................................................................................................................................................................................................";
+      letter-spacing: 8px;
+      color: #cacaca;
+    }
+
+    .dots {
+      letter-spacing: 8px;
+      color: #cacaca;
+    }
+  }
+}

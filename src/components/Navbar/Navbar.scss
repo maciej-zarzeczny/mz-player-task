@@ -1,0 +1,32 @@
+@import "../../assets/styles/functions";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.navbar {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing;
+
+  .back-button {
+    width: 16px;
+    height: auto;
+  }
+
+  .title {
+    @include uppercase-text;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: color("white");
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .more-button {
+    width: 4px;
+    height: auto;
+  }
+}

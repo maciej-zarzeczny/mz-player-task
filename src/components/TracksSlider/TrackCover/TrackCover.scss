@@ -1,0 +1,25 @@
+@import "../../../assets/styles/functions";
+
+.track-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #1f1937;
+    border: 5px solid color("primary");
+
+    .usertive-logo {
+      width: 28px;
+      height: auto;
+    }
+  }
+}

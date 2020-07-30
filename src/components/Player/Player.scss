@@ -1,0 +1,50 @@
+@import "../../assets/styles/functions";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.player {
+  background-color: color("bg-1");
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  .bg-image {
+    background-image: url("../../assets/images/bg_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: absolute;
+    opacity: 0.1;
+    mix-blend-mode: luminosity;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .gradient {
+    background-image: linear-gradient(to top, #1f1937, #1b1b1b);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  .track-info {
+    margin-top: 40px;
+
+    .track-title {
+      color: color("white");
+      text-align: center;
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 900;
+    }
+
+    .track-author {
+      @include uppercase-text;
+
+      text-align: center;
+    }
+  }
+}
