@@ -6,7 +6,7 @@ const initState = {
   sliderRef: null,
   tracks: [
     { title: "Title 1", author: "Kanye West", coverImage: Cover1, duration: 218 },
-    { title: "Self Conscious", author: "Kanye West", coverImage: Cover2, duration: 5 },
+    { title: "Self Conscious", author: "Kanye West", coverImage: Cover2, duration: 252 },
     { title: "Livin' In A Movie", author: "Kanye West", coverImage: Cover3, duration: 217 },
   ],
   currentTrack: 0,
@@ -25,9 +25,9 @@ const playerReducer = (state = initState, action) => {
       };
 
     case "NEXT_TRACK":
-      const nextTrack = state.currentTrack + 1;
+      let nextTrack = state.currentTrack + 1;
       if (nextTrack > state.tracks.length - 1) {
-        return state;
+        nextTrack = 0;
       }
 
       return {
@@ -37,9 +37,9 @@ const playerReducer = (state = initState, action) => {
       };
 
     case "PREVIOUS_TRACK":
-      const previousTrack = state.currentTrack - 1;
+      let previousTrack = state.currentTrack - 1;
       if (previousTrack < 0) {
-        return state;
+        previousTrack = state.tracks.length - 1;
       }
 
       return {

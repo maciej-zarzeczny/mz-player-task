@@ -63,6 +63,22 @@ class Controls extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    if (this.trackDurationInterval !== null) {
+      clearInterval(this.trackDurationInterval);
+    }
+  }
+
+  // Function for converting seconds to mm:ss format
+  formatSeconds(value) {
+    let mins = Math.floor((value / 60) % 60);
+    let secs = Math.floor(value - mins * 60);
+    if (mins < 10) mins = `0${mins}`;
+    if (secs < 10) secs = `0${secs}`;
+
+    return `${mins}:${secs}`;
+  }
+
   render() {
     const {
       slider,
@@ -79,17 +95,8 @@ class Controls extends React.Component {
     if (durationProgress > 100) durationProgress = 100;
 
     // Format seconds to mm:ss
-    let mins = Math.floor((currentDuration / 60) % 60);
-    let secs = Math.floor(currentDuration - mins * 60);
-    if (mins < 10) mins = `0${mins}`;
-    if (secs < 10) secs = `0${secs}`;
-    const currentDurationFormatted = `${mins}:${secs}`;
-
-    mins = Math.floor((tracks[currentTrack].duration / 60) % 60);
-    secs = Math.floor(tracks[currentTrack].duration - mins * 60);
-    if (mins < 10) mins = `0${mins}`;
-    if (secs < 10) secs = `0${secs}`;
-    const trackDurationFormatted = `${mins}:${secs}`;
+    const currentDurationFormatted = this.formatSeconds(currentDuration);
+    const trackDurationFormatted = this.formatSeconds(tracks[currentTrack].duration);
 
     return (
       <section className="controls">

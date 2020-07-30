@@ -10,7 +10,7 @@ class TracksSlider extends React.Component {
     const { tracks, currentTrack, addSliderRef } = this.props;
 
     const sliderSettings = {
-      infinite: false,
+      infinite: true,
       slidesToShow: 1,
       speed: 500,
     };
