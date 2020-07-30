@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./Player.scss";
 
 import Navbar from "../Navbar/Navbar";
@@ -6,24 +7,33 @@ import TracksSlider from "../TracksSlider/TracksSlider";
 import Controls from "../Controls/Controls";
 import BottomInfoBar from "../BottomInfoBar/BottomInfoBar";
 
-function Player() {
-  return (
-    <section className="player">
-      <div className="gradient"></div>
-      <div className="bg-image"></div>
+class Player extends React.Component {
+  render() {
+    const { tracks, currentTrack } = this.props;
 
-      <Navbar />
-      <TracksSlider />
+    return (
+      <section className="player">
+        <div className="gradient"></div>
+        <div className="bg-image"></div>
 
-      <div className="track-info">
-        <h1 className="track-title">Self Conscious</h1>
-        <p className="track-author">KANYE WEST</p>
-      </div>
+        <Navbar />
+        <TracksSlider />
 
-      <Controls />
-      <BottomInfoBar />
-    </section>
-  );
+        <div className="track-info">
+          <h1 className="track-title">{tracks[currentTrack].title}</h1>
+          <p className="track-author">{tracks[currentTrack].author}</p>
+        </div>
+
+        <Controls />
+        <BottomInfoBar />
+      </section>
+    );
+  }
 }
 
-export default Player;
+const mapStateToProps = (state) => ({
+  tracks: state.player.tracks,
+  currentTrack: state.player.currentTrack,
+});
+
+export default connect(mapStateToProps, null)(Player);

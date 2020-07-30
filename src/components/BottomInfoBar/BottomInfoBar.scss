@@ -9,9 +9,17 @@ section.bottom-info-bar {
   background-color: color("white");
   padding: 25px $spacing;
 
+  @include mobile {
+    padding: 0 $spacing;
+  }
+
   .playlist-button {
     width: 36px;
     height: auto;
+
+    @include mobile {
+      width: 26px;
+    }
   }
 
   .next-track-duration {

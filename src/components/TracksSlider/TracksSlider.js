@@ -1,19 +1,41 @@
 import React from "react";
+import { connect } from "react-redux";
+import { addSliderRef } from "../../redux/actions/PlayerActions";
 import "./TracksSlider.scss";
 import Track from "./TrackCover/TrackCover";
+import Slider from "react-slick";
 
-import Cover1 from "../../assets/images/cover.png";
-import Cover2 from "../../assets/images/unreleased_cover.png";
-import Cover3 from "../../assets/images/cover-1.png";
+class TracksSlider extends React.Component {
+  render() {
+    const { tracks, currentTrack, addSliderRef } = this.props;
 
-function TracksSlider() {
-  const coversList = [Cover1, Cover2, Cover3];
+    const sliderSettings = {
+      infinite: false,
+      slidesToShow: 1,
+      speed: 500,
+    };
 
-  const covers = coversList.map((cover, idx) => {
-    return <Track img={cover} active={idx === 1} key={idx} />;
-  });
+    const covers = tracks.map((track, idx) => {
+      return <Track img={track.coverImage} active={idx === currentTrack} key={idx} />;
+    });
 
-  return <section className="tracks-slider">{covers}</section>;
+    return (
+      <section>
+        <Slider ref={(c) => addSliderRef(c)} {...sliderSettings}>
+          {covers}
+        </Slider>
+      </section>
+    );
+  }
 }
 
-export default TracksSlider;
+const mapStateToProps = (state) => ({
+  tracks: state.player.tracks,
+  currentTrack: state.player.currentTrack,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addSliderRef: (ref) => dispatch(addSliderRef(ref)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TracksSlider);

@@ -1,9 +1,32 @@
 @import "../../../assets/styles/functions";
+@import "../../../assets/styles/mixins";
 
 .track-cover {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 320px;
+
+  img {
+    width: 128px;
+    height: 128px;
+    transition: all 0.5s ease-in-out;
+
+    @include mobile {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &.active img {
+    width: 320px;
+    height: 320px;
+
+    @include mobile {
+      width: 220px;
+      height: 220px;
+    }
+  }
 
   .logo-container {
     position: absolute;
@@ -17,9 +40,18 @@
     background-color: #1f1937;
     border: 5px solid color("primary");
 
+    @include mobile {
+      width: 45px;
+      height: 45px;
+    }
+
     .usertive-logo {
       width: 28px;
       height: auto;
+
+      @include mobile {
+        width: 14px;
+      }
     }
   }
 }

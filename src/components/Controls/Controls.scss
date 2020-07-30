@@ -1,5 +1,6 @@
 @import "../../assets/styles/functions";
 @import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
 
 section.controls {
   color: white;
@@ -18,15 +19,54 @@ section.controls {
   .control-item {
     height: 26px;
     width: auto;
+
+    &.active {
+      background-color: white;
+    }
+
+    @include mobile {
+      height: 20px;
+    }
+  }
+
+  .play-btn {
+    position: relative;
+    width: 270px;
+    height: 279px;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transition: all 0.2s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+
+      &.inactive {
+        opacity: 0;
+      }
+
+      @include mobile {
+        width: 75%;
+        height: auto;
+      }
+    }
   }
 
   .progress-bar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 $spacing;
 
     .duration-info {
+      width: 80px;
+      text-align: center;
       font-size: 18px;
       line-height: 36px;
       color: color("gray");
@@ -40,12 +80,12 @@ section.controls {
       background-color: color("accent");
 
       .progress {
-        width: 75%;
         height: 5px;
         border-radius: 5px;
         background: color("accent");
         position: relative;
         top: -2px;
+        transition: all 1s linear;
       }
     }
   }
@@ -53,5 +93,6 @@ section.controls {
   .waveform {
     min-width: 100%;
     margin-top: 40px;
+    align-self: flex-end;
   }
 }

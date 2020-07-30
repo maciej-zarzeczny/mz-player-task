@@ -7,10 +7,8 @@ class Track extends React.Component {
   render() {
     const { img, active } = this.props;
 
-    const coverStyle = active ? "active" : "";
-
     return (
-      <div className={`track-cover ${coverStyle}`}>
+      <div className={`track-cover ${active ? "active" : ""}`}>
         <img src={img} alt="Track cover" />
         {active && (
           <div className="logo-container">
