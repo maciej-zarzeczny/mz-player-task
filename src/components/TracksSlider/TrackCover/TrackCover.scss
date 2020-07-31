@@ -7,6 +7,10 @@
   align-items: center;
   height: 320px;
 
+  @include mobile {
+    height: 170px;
+  }
+
   &.next {
     justify-content: flex-start;
   }
@@ -43,8 +47,8 @@
     height: 320px;
 
     @include mobile {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
     }
   }
 
