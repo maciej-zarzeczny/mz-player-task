@@ -1,4 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Player task - Maciej Zarzeczny
+
+Wykorzystanie technologie: <br />
+
+- React
+- Redux
+- SASS
+
+<br />
+<br />
+
+Wykorzystane biblioteki: <br />
+
+- React-Slick (Slider albumów)
 
 ## Available Scripts
 
