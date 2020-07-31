@@ -12,6 +12,7 @@ class TracksSlider extends React.Component {
     const sliderSettings = {
       infinite: true,
       draggable: false,
+      swipe: false,
       slidesToShow: 1,
       speed: 300,
     };
