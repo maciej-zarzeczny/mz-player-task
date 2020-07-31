@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f79b820bdbfaaec575c881dc7d34fe8",
+    "revision": "6978852fcb962e9c588531806118fb53",
     "url": "/mz-player-task/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mz-player-task/static/css/2.e58d8423.chunk.css"
   },
   {
-    "revision": "4dfba6eca3fac57f6859",
-    "url": "/mz-player-task/static/css/main.bfd08e2b.chunk.css"
+    "revision": "82c8442cf1f20553625c",
+    "url": "/mz-player-task/static/css/main.9a3f3fca.chunk.css"
   },
   {
     "revision": "550531a5bed07c157229",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mz-player-task/static/js/2.066d9b4e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4dfba6eca3fac57f6859",
+    "revision": "82c8442cf1f20553625c",
     "url": "/mz-player-task/static/js/main.b18b8ff9.chunk.js"
   },
   {
@@ -28,12 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mz-player-task/static/js/runtime-main.a9a50899.js"
   },
   {
-    "revision": "0f6e082f42f5247d82c3ade9c2a8f928",
-    "url": "/mz-player-task/static/media/Gilroy-ExtraBold.0f6e082f.otf"
+    "revision": "3a1f1d2af66451e7f4b10da2b885fb57",
+    "url": "/mz-player-task/static/media/Gilroy-Extrabold.3a1f1d2a.ttf"
   },
   {
-    "revision": "c62aded729bf7146d491275e5019d7fc",
-    "url": "/mz-player-task/static/media/Gilroy-Light.c62aded7.otf"
+    "revision": "5a9a1fcfa5baaa34e2ed1c11b37a6e11",
+    "url": "/mz-player-task/static/media/Gilroy-Extrabold.5a9a1fcf.woff2"
+  },
+  {
+    "revision": "bc3a01669ab88aa1005c52012e13a5e8",
+    "url": "/mz-player-task/static/media/Gilroy-Extrabold.bc3a0166.woff"
+  },
+  {
+    "revision": "085f3ee361c9b80e0ccf8a703da9efe6",
+    "url": "/mz-player-task/static/media/Gilroy-Light.085f3ee3.woff2"
+  },
+  {
+    "revision": "1111f8b003573d984ba8a7179862fb32",
+    "url": "/mz-player-task/static/media/Gilroy-Light.1111f8b0.ttf"
+  },
+  {
+    "revision": "679cd8013e1e98981a3daa13995f5949",
+    "url": "/mz-player-task/static/media/Gilroy-Light.679cd801.woff"
   },
   {
     "revision": "d522478d9c40ce1d72360effa1c66521",
