@@ -11,12 +11,13 @@ class TracksSlider extends React.Component {
 
     const sliderSettings = {
       infinite: true,
+      draggable: false,
       slidesToShow: 1,
-      speed: 500,
+      speed: 300,
     };
 
     const covers = tracks.map((track, idx) => {
-      return <Track img={track.coverImage} active={idx === currentTrack} key={idx} />;
+      return <Track img={track.coverImage} idx={idx} currentTrack={currentTrack} key={idx} />;
     });
 
     return (

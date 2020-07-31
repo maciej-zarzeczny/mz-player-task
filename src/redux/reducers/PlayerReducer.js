@@ -6,7 +6,7 @@ const initState = {
   sliderRef: null,
   tracks: [
     { title: "Title 1", author: "Kanye West", coverImage: Cover1, duration: 218 },
-    { title: "Self Conscious", author: "Kanye West", coverImage: Cover2, duration: 252 },
+    { title: "Self Conscious", author: "Kanye West", coverImage: Cover2, duration: 5 },
     { title: "Livin' In A Movie", author: "Kanye West", coverImage: Cover3, duration: 217 },
   ],
   currentTrack: 0,

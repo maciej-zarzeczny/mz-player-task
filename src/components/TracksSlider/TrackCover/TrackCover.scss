@@ -7,14 +7,34 @@
   align-items: center;
   height: 320px;
 
+  &.next {
+    justify-content: flex-start;
+  }
+
+  &.previous {
+    justify-content: flex-end;
+  }
+
+  &.active {
+    justify-content: center;
+  }
+
+  &:not(.active) {
+    margin: 0 -64px;
+
+    @include mobile {
+      margin: 0 -38px;
+    }
+  }
+
   img {
     width: 128px;
     height: 128px;
     transition: all 0.5s ease-in-out;
 
     @include mobile {
-      width: 100px;
-      height: 100px;
+      width: 76px;
+      height: 76px;
     }
   }
 
@@ -23,8 +43,8 @@
     height: 320px;
 
     @include mobile {
-      width: 220px;
-      height: 220px;
+      width: 140px;
+      height: 140px;
     }
   }
 

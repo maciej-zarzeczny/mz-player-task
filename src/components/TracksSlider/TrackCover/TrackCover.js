@@ -5,10 +5,15 @@ import UsertiveLogo from "../../../assets/images/usertive_logo.svg";
 
 class Track extends React.Component {
   render() {
-    const { img, active } = this.props;
+    const { img, idx, currentTrack } = this.props;
+    const active = idx === currentTrack;
 
     return (
-      <div className={`track-cover ${active ? "active" : ""}`}>
+      <div
+        className={`track-cover ${active ? "active" : ""} ${idx < currentTrack ? "previous" : ""} ${
+          idx > currentTrack ? "next" : ""
+        }`}
+      >
         <img src={img} alt="Track cover" />
         {active && (
           <div className="logo-container">
