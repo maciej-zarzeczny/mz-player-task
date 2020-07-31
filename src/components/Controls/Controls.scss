@@ -18,14 +18,18 @@ section.controls {
 
   .control-item {
     height: 26px;
+    padding: 10px;
     width: auto;
+    transition: all 0.3s ease-in-out;
 
     &.active {
-      background-color: white;
+      background-color: color("accent");
+      border-radius: 50%;
     }
 
     @include mobile {
       height: 20px;
+      padding: 5px;
     }
   }
 

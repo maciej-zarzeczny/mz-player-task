@@ -41,9 +41,9 @@ class Controls extends React.Component {
       }
     }
 
-    // If the song is over go to the next one
+    // If the track is over go to the next one
     if (this.props.currentDuration > this.props.tracks[this.props.currentTrack].duration) {
-      // If shuffle button is active choose random track
+      // If shuffle button is active choose random track other than the one currently playing
       if (this.props.shuffleActive) {
         let randomTrackNumber = -1;
         do {
@@ -63,6 +63,7 @@ class Controls extends React.Component {
     }
   }
 
+  // Clear duration interval
   componentWillUnmount() {
     if (this.trackDurationInterval !== null) {
       clearInterval(this.trackDurationInterval);
@@ -101,11 +102,11 @@ class Controls extends React.Component {
     return (
       <section className="controls">
         <div className="controls-container">
-          <a href="#!">
+          <a href="#!" className="shuffle-btn">
             <img
               src={ShuffleIcon}
               onClick={() => this.props.shuffle()}
-              className={`control-item ${shuffleActive ? "active" : ""}`}
+              className={`control-item ${shuffleActive ? "active" : "inactive"}`}
               alt="Shuffle play"
             />
           </a>
